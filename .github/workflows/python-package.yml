@@ -27,7 +27,10 @@ jobs:
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Build binary wheel and a source tarball
-        run: python setup.py sdist
+        run: |
+          pip install wheel
+          python setup.py bdist_egg --exclude-source-files
+          wheel convert dist/wolfgang-0.0-py3.7.egg
       - name: Publish distribution to Test PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
