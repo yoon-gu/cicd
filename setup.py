@@ -6,7 +6,7 @@ class BinaryDistribution(Distribution):
 
 setup(	name='wolfgang', version='0.1.4',
 		description='CI/CD Example',
-		url='https://github.com/yoon-gu/ci-cd/',
+		url='https://github.com/yoon-gu/cicd/',
 		author='Yoon-gu Hwang',
 		author_email='yz0624@gmail.com',
 		license='MIT',
