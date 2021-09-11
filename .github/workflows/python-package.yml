@@ -30,7 +30,7 @@ jobs:
         run: |
           pip install twine wheel
           python setup.py bdist_egg --exclude-source-files
-          wheel convert dist/wolfgang-0.1.3-py3.7.egg -d dist
+          wheel convert dist/wolfgang-0.1.4-py3.7.egg -d dist
       - name: Publish distribution to Test PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
