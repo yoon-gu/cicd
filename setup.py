@@ -4,7 +4,7 @@ class BinaryDistribution(Distribution):
 	def is_pure(self):
 		return False
 
-setup(	name='wolfgang', version='0.1',
+setup(	name='wolfgang', version='0.1.1',
 		description='CI/CD Example',
 		url='https://github.com/yoon-gu/ci-cd/',
 		author='Yoon-gu Hwang',
