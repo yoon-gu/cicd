@@ -1,4 +1,8 @@
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Distribution
+
+class BinaryDistribution(Distribution):
+	def is_pure(self):
+		return False
 
 setup(	name='wolfgang', version='0.1',
 		description='CI/CD Example',
@@ -11,4 +15,5 @@ setup(	name='wolfgang', version='0.1',
 			'numpy',
 		],
 		include_package_data=True,
+		distclass=BinaryDistribution,
 		zip_safe=False)
